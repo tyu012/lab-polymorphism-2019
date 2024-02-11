@@ -66,9 +66,34 @@ public class TBExpt {
       TBUtils.print(pen, new BoxedBlock(new BottomJustified(vBlock, 10)));
 
       TextBlock boxed1 = new BoxedBlock(new TextLine("  a"));
+
       TextBlock boxed2 = new BoxedBlock(new RightJustified(new TextLine("a"), 3));
 
+      TextBlock boxed1cpy = boxed1;
+
+      TextBlock boxed1cpy2 = new BoxedBlock(new TextLine("  a"));
+
+      TBUtils.print(pen, boxed1);
+
+      TBUtils.print(pen, boxed2);
+
       pen.println(TBUtils.equal(boxed1, boxed2)); // should be true
+
+      pen.println(TBUtils.eqv(boxed1, boxed2)); // should be false
+
+      pen.println(TBUtils.eqv(boxed1, boxed1cpy)); // should be true
+
+      pen.println(TBUtils.eqv(boxed1, boxed1cpy2)); // should be true
+
+      pen.println(TBUtils.eq(boxed1, boxed1)); //should be true
+      pen.println(TBUtils.eq (boxed1, boxed1cpy)); //true
+      pen.println(TBUtils.eq (boxed1, boxed2)); //false
+
+
+      
+      
+
+
       
 
 

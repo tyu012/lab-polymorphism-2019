@@ -73,6 +73,9 @@ public class TBUtils {
    * Return true if both TextBlock objects contain the same lines
    */
   static boolean equal(TextBlock t1, TextBlock t2) {
+    if (t1.height() != t2.height()) {
+      return false;
+    }
     for (int i = 0; i < t1.height(); i++) {
       try {
         if (!t1.row(i).equals(t2.row(i))) {
@@ -89,10 +92,24 @@ public class TBUtils {
    * Return true if both TextBlock objects contain the same lines
    */
   static boolean eqv(TextBlock t1, TextBlock t2) {
-    for (int i = 0; i < t1.height(); i++) {
-      
+    if (equal(t1, t2)
+        && (t1.components().length == t2.components().length)
+        && t1.getClass() == t2.getClass()) {
+      if (t1.components().length == 0) {
+        return true;
+      }
+      boolean result = true;
+      for (int i = 0; i < t1.components().length; i++) {
+        result = result && eqv(t1.components()[i], t2.components()[i]);
+      }
+      return result;
+    } else {
+      return false;
     }
-    return true;
+  }
+
+  static boolean eq(TextBlock t1, TextBlock t2) {
+    return (t1 == t2);
   }
 
 
