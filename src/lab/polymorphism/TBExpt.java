@@ -51,7 +51,7 @@ public class TBExpt {
 
     TBUtils.print (pen, vBlock);
 
-
+    TBUtils.print(pen, new Truncated(vBlock, 4));
 
 
     // Clean up after ourselves.
