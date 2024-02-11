@@ -69,4 +69,31 @@ public class TBUtils {
     return lotsOfSpaces.substring(0, len);
   } // spaces(int)
 
+  /**
+   * Return true if both TextBlock objects contain the same lines
+   */
+  static boolean equal(TextBlock t1, TextBlock t2) {
+    for (int i = 0; i < t1.height(); i++) {
+      try {
+        if (!t1.row(i).equals(t2.row(i))) {
+          return false;
+        }
+      } catch (Exception e) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  /**
+   * Return true if both TextBlock objects contain the same lines
+   */
+  static boolean eqv(TextBlock t1, TextBlock t2) {
+    for (int i = 0; i < t1.height(); i++) {
+      
+    }
+    return true;
+  }
+
+
 } // class TBUtils

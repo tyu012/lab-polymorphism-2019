@@ -1,6 +1,7 @@
 package lab.polymorphism;
 
 import java.io.PrintWriter;
+import org.w3c.dom.Text;
 
 /**
  * A series of experiments with the text block layout classes.
@@ -63,6 +64,11 @@ public class TBExpt {
       TBUtils.print(pen, new VerticallyFlipped(vBlock));
 
       TBUtils.print(pen, new BoxedBlock(new BottomJustified(vBlock, 10)));
+
+      TextBlock boxed1 = new BoxedBlock(new TextLine("  a"));
+      TextBlock boxed2 = new BoxedBlock(new RightJustified(new TextLine("a"), 3));
+
+      pen.println(TBUtils.equal(boxed1, boxed2)); // should be true
       
 
 

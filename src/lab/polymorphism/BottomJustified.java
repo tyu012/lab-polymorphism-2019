@@ -5,7 +5,7 @@ public class BottomJustified implements TextBlock {
   private int height;
 
     /**
-   * Shifts the Textbox to the bottom
+   * Shifts the Textbox b to the bottom
    * @pre height greater than or equal to b.height()
    * @exception Exception if height is invalid
    */
@@ -16,6 +16,14 @@ public class BottomJustified implements TextBlock {
     }
     this.contents = b;
     this.height = height;
+  }
+
+  /**
+   * return an array containing all of the components that went into the creation of this textblock
+   * It there are no components, the array will be empty.
+   */
+  public TextBlock[] components() {
+    return new TextBlock[] { this.contents };
   }
 
 

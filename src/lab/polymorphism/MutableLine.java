@@ -30,6 +30,15 @@ public class MutableLine implements TextBlock {
   // | Methods |
   // +---------+
 
+
+  /**
+   * return an array containing all of the components that went into the creation of this textblock
+   * It there are no components, the array will be empty.
+   */
+  public TextBlock[] components() {
+    return new TextBlock[] {};
+  }
+
   /**
    * Set the line.
    */
