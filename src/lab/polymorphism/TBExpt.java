@@ -56,7 +56,9 @@ public class TBExpt {
     TBUtils.print(pen, new BoxedBlock(new Centered(vBlock, 18)));
 
 
-    TBUtils.print(pen, new BoxedBlock (new RightJustified(vBlock, 12 )));
+    TBUtils.print(pen, new BoxedBlock(new RightJustified(vBlock, 12 )));
+
+    TBUtils.print(pen, new HorizontallyFlipped(vBlock));
     
 
 
