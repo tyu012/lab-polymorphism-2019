@@ -7,9 +7,9 @@ import org.junit.jupiter.api.Test;
 
 public class EqvTest {
   TextBlock boxedRightJustifiedHelloWorld =
-      new BoxedBlock(new RightJustfied(new TextLine("Hello World"), 12));
+      new BoxedBlock(new RightJustified(new TextLine("Hello World"), 12));
   TextBlock boxedRightJustifiedHelloWorldCopy =
-      new BoxedBlock(new RightJustfied(new TextLine("Hello World"), 12));
+      new BoxedBlock(new RightJustified(new TextLine("Hello World"), 12));
   TextBlock boxedSpaceHelloWorld =
       new BoxedBlock(new TextLine(" Hello World"));
 
