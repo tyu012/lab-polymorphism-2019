@@ -53,6 +53,8 @@ public class TBExpt {
 
     TBUtils.print(pen, new Truncated(vBlock, 4));
 
+    TBUtils.print(pen, new BoxedBlock(new Centered(vBlock, 18)));
+
 
     // Clean up after ourselves.
     pen.close();
