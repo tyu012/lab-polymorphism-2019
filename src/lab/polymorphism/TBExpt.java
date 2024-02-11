@@ -14,56 +14,64 @@ public class TBExpt {
   // +------+
 
   public static void main(String[] args) throws Exception {
-    // Prepare for input and output
-    PrintWriter pen = new PrintWriter(System.out, true);
+    try {
+      // Prepare for input and output
+      PrintWriter pen = new PrintWriter(System.out, true);
 
-    // Create a block to use
-    TextBlock block = new TextLine("This is a test");
+      // Create a block to use
+      TextBlock block = new TextLine("This is a test");
 
-    TextBlock newBlock = new BoxedBlock(block);
+      TextBlock newBlock = new BoxedBlock(block);
 
-    TextBlock newNewBlock = new BoxedBlock(newBlock);
+      TextBlock newNewBlock = new BoxedBlock(newBlock);
 
-    TextLine newLine = new TextLine("");
+      TextLine newLine = new TextLine("");
 
-    TextBlock emptyBlock = new BoxedBlock(newLine);
-
-
-
-    TextLine hello = new TextLine("Hello");
-
-    TextLine goodbye = new TextLine("Goodbye");
-
-    TextBlock vBlock = new BoxedBlock(new VComposition(hello, goodbye));
+      TextBlock emptyBlock = new BoxedBlock(newLine);
 
 
 
+      TextLine hello = new TextLine("Hello");
+
+      TextLine goodbye = new TextLine("Goodbye");
+
+      TextBlock vBlock = new BoxedBlock(new VComposition(hello, goodbye));
 
 
 
-    
-    // Print out the block
-    TBUtils.print(pen, newBlock);
-    
-    TBUtils.print(pen, newNewBlock);
-
-    TBUtils.print (pen, emptyBlock);
-
-    TBUtils.print (pen, vBlock);
-
-    TBUtils.print(pen, new Truncated(vBlock, 4));
-
-    TBUtils.print(pen, new BoxedBlock(new Centered(vBlock, 18)));
 
 
-    TBUtils.print(pen, new BoxedBlock(new RightJustified(vBlock, 12 )));
 
-    TBUtils.print(pen, new HorizontallyFlipped(vBlock));
-    
+      
+      // Print out the block
+      TBUtils.print(pen, newBlock);
+      
+      TBUtils.print(pen, newNewBlock);
+
+      TBUtils.print (pen, emptyBlock);
+
+      TBUtils.print (pen, vBlock);
+
+      TBUtils.print(pen, new Truncated(vBlock, 4));
+
+      TBUtils.print(pen, new BoxedBlock(new Centered(vBlock, 18)));
+
+      TBUtils.print(pen, new BoxedBlock(new RightJustified(vBlock, 12 )));
+
+      TBUtils.print(pen, new HorizontallyFlipped(vBlock));
+
+      TBUtils.print(pen, new VerticallyFlipped(vBlock));
+
+      TBUtils.print(pen, new BoxedBlock(new BottomJustified(vBlock, 10)));
+      
 
 
-    // Clean up after ourselves.
-    pen.close();
+      // Clean up after ourselves.
+      pen.close();
+    } catch (Exception e) {
+      PrintWriter err = new PrintWriter(System.err, true);
+      err.println(e.getMessage());
+    }
   } // main(String[])
 
 } // class TBExpt
