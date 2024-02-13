@@ -22,6 +22,6 @@ public class EqTest {
 
   @Test
   public void testEqDifferentTextBlockInMem() {
-    assertEquals(true, TBUtils.eq(helloWorld, helloWorldCopy), "eq with different text block in memory")
+    assertEquals(true, TBUtils.eq(helloWorld, helloWorldCopy), "eq with different text block in memory");
   }
 }
