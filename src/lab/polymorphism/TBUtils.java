@@ -89,7 +89,8 @@ public class TBUtils {
   }
 
   /**
-   * Return true if both TextBlock objects contain the same lines
+   * Return true if both TextBlock objects contain the same lines and are built
+   * in the same way.
    */
   static boolean eqv(TextBlock t1, TextBlock t2) {
     if (equal(t1, t2)
@@ -108,6 +109,10 @@ public class TBUtils {
     }
   }
 
+  /**
+   * Return true if t1 and t2 are the same TextBlock object (with regards to
+   * their location in memory).
+   */
   static boolean eq(TextBlock t1, TextBlock t2) {
     return (t1 == t2);
   }
