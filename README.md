@@ -10,7 +10,7 @@ David Rhoades, Alyssa Trapp, Tim Yu
 
 ## Purpose
 
-A demonstration of subtype inheritance through creating classes which implement
+A demonstration of subtype polymorphism through creating classes which implement
 the `TextBlock` interface.
 
 ## Acknowledgements
