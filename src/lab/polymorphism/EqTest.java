@@ -1,10 +1,3 @@
-/**
- * Testing for the eq method in TBUtils.java
- * @author David Rhoades
- * @author Alyssa Trapp
- * @author Tim Yu
- */
-
 package lab.polymorphism;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,12 +5,18 @@ import static org.junit.jupiter.api.Assertions.fail;
 import static org.junit.jupiter.api.Assumptions.abort;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Testing for the eq method in TBUtils.java
+ * @author David Rhoades
+ * @author Alyssa Trapp
+ * @author Tim Yu
+ */
 public class EqTest {
   TextBlock helloworldTrunc; 
   
 
   public EqTest() throws Exception {
-    TextBlock helloworldTrunc = new Truncated(new TextLine("Hello World1"), 11);
+    helloworldTrunc = new Truncated(new TextLine("Hello World1"), 11);
   }
 
   TextBlock helloWorldCopy = new TextLine("Hello World");

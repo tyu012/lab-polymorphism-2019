@@ -18,6 +18,10 @@ the `TextBlock` interface.
 * Java® Platform, Standard Edition & Java Development Kit Version 17 API Specification:
   * https://docs.oracle.com/en/java/javase/17/docs/api/index.html
 
+* Simon, evening tutor, for helping with running test cases.
+
+* Samuel A. Rebelsky for helping set up JUnit on VSCode.
+
 * This is a fork of Samuel A. Rebelsky's `lab-polymorphism-2019` repository,
   which was used for the text layout lab.
   The contents of the original `README.md` file is below:

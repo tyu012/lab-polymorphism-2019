@@ -1,11 +1,3 @@
-/**
- * Testing for the eqv method in TBUtils.java
- * @author David Rhoades
- * @author Alyssa Trapp
- * @author Tim Yu
- */
-
-
 package lab.polymorphism;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,11 +5,17 @@ import static org.junit.jupiter.api.Assertions.fail;
 import static org.junit.jupiter.api.Assumptions.abort;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Testing for the eqv method in TBUtils.java
+ * @author David Rhoades
+ * @author Alyssa Trapp
+ * @author Tim Yu
+ */
 public class EqvTest{
   public TextBlock boxedRightJustifiedHelloWorld;
   public TextBlock boxedRightJustifiedHelloWorldCopy;
   public TextBlock boxedSpaceHelloWorld;
-  public TextBlock boxedRightJustifiedHelloWrodlDifCopy;
+  public TextBlock boxedRightJustifiedHelloWorldDifCopy;
   public TextBlock emptyBlock;
   public TextBlock emptyBlock2;
 
@@ -28,13 +26,12 @@ public class EqvTest{
         new BoxedBlock(new RightJustified(new TextLine("Hello World"), 12));
     boxedSpaceHelloWorld =
         new BoxedBlock(new TextLine(" Hello World"));
-    boxedRightJustifiedHelloWrodlDifCopy = 
+    boxedRightJustifiedHelloWorldDifCopy = 
         new BoxedBlock(new RightJustified(new Truncated (new TextLine("Hello World"), 11), 12));
     emptyBlock = 
         new BoxedBlock (new TextLine (("")));
     emptyBlock2 =
         new BoxedBlock (new TextLine (("")));
-
   }
   
   @Test
@@ -54,17 +51,16 @@ public class EqvTest{
 
   @Test
   public void testEqvFalse2() {
-    assertEquals(false, TBUtils.eqv(boxedRightJustifiedHelloWorldCopy, boxedRightJustifiedHelloWrodlDifCopy), "eqv false, same appearance");
+    assertEquals(false, TBUtils.eqv(boxedRightJustifiedHelloWorldCopy, boxedRightJustifiedHelloWorldDifCopy), "eqv false, same appearance");
   }
 
   @Test
-  public void testEqvEmpty(){
+  public void testEqvEmpty() {
    assertEquals (true, TBUtils.eqv (emptyBlock, emptyBlock2), "eqv, both have an empty string, so they should be true");
   }
 
-
   @Test
-  public void testEqvEmptyString(){
+  public void testEqvEmptyString() {
     assertEquals (false, TBUtils.eqv (emptyBlock, boxedSpaceHelloWorld), "eqv, empty and non-empty string, so should be false");
   }
 }

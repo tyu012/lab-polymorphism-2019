@@ -7,6 +7,9 @@ import org.junit.jupiter.api.Test;
 
 /**
  * JUnit test class for Truncated class
+ * @author David Rhoades
+ * @author Alyssa Trapp
+ * @author Tim Yu
  */
 public class TruncatedTest {
   public TextBlock helloWorld;
