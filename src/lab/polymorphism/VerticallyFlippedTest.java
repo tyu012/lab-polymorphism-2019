@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
  * @author David Rhoades, adapted from tests by Tim Yu
  */
 public class VerticallyFlippedTest {
+  TextBlock empty;
   TextBlock lorem;
   TextBlock ipsum;
   TextBlock loremIpsum;
@@ -21,6 +22,8 @@ public class VerticallyFlippedTest {
   TextBlock boxedLoremIpsumFlipped;
 
   public VerticallyFlippedTest() throws Exception {
+    
+    empty = new TextLine("");
     lorem = new TextLine("Lorem");
     ipsum = new TextLine("Ipsum");
     loremIpsum = new VComposition(lorem, ipsum);
@@ -49,5 +52,23 @@ public class VerticallyFlippedTest {
   public void testVerticallyFlippedThreeLines() throws Exception {
     assertEquals(true, TBUtils.equal(new VerticallyFlipped(loremIpsumText), loremIpsumTextFlipped),
         "Vertically flips block with odd height");
+  }
+
+  @Test
+  public void testVerticallyFlippedOneLine() throws Exception {
+    assertEquals(true, TBUtils.equal(new VerticallyFlipped(lorem), lorem),
+        "Vertically flips one line (no change)");
+  }
+
+  @Test
+  public void testVerticallyFlippedEmptyLine() throws Exception {
+    assertEquals(true, TBUtils.equal(new VerticallyFlipped(empty), empty),
+        "Vertically flips an empty line (no change)");
+  }
+
+  @Test
+  public void testVerticallyFlippedTwice() throws Exception {
+    assertEquals(true, TBUtils.equal(new VerticallyFlipped(new VerticallyFlipped(loremIpsum)), loremIpsum),
+        "Vertically flips one line (no change)");
   }
 }
