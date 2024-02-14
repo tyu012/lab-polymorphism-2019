@@ -20,7 +20,7 @@ public class EqualTest {
   public TextBlock vFlippedBlock2;
 
 
-//if have same lines should return true 
+  // if have same lines should return true 
   public EqualTest() throws Exception {
     boxedRightJustifiedHelloWorldCopy =
         new BoxedBlock(new RightJustified(new TextLine("Hello World"), 12));

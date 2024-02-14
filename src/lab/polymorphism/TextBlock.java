@@ -21,8 +21,8 @@ public interface TextBlock {
 
 
   /**
-   * return an array containing all of the components that went into the creation of this textblock
-   * It there are no components, the array will be empty.
+   * return an array containing all of the TextBlock components that went into the creation of this TextBlock
+   * If there are no TextBlock components, the array will be empty.
    */
   public TextBlock[] components();
 

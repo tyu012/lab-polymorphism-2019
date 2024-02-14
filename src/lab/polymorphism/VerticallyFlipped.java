@@ -6,7 +6,7 @@ package lab.polymorphism;
  * @author Alyssa Trapp
  * @author Tim Yu
  */
-public class VerticallyFlipped implements TextBlock{
+public class VerticallyFlipped implements TextBlock {
   /** What will be vertically flipped */
   private TextBlock contents;
 

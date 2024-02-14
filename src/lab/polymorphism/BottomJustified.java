@@ -55,7 +55,7 @@ public class BottomJustified implements TextBlock {
     }  
   }
 
- /**
+  /**
    * Determine how many rows are in the block.
    */
   public int height() {
