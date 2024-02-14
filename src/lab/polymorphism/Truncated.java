@@ -1,7 +1,16 @@
 package lab.polymorphism;
 
+/**
+ * Text block which truncates content text block to a smaller or equal width
+ * @author David Rhoades
+ * @author Alyssa Trapp
+ * @author Tim Yu
+ */
 public class Truncated implements TextBlock {
+  /** What will be truncated */
   private TextBlock contents;
+
+  /** The width that contents will be trucated to */
   private int width;
 
   /**

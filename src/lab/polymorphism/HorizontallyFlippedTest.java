@@ -1,9 +1,6 @@
 package lab.polymorphism;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
-import static org.junit.jupiter.api.Assumptions.abort;
 import org.junit.jupiter.api.Test;
 
 /**

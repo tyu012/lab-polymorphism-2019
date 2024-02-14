@@ -1,9 +1,16 @@
 package lab.polymorphism;
 
+/**
+ * Text block which inverts contents so that up-to-down will be down-to-up.
+ * @author David Rhoades
+ * @author Alyssa Trapp
+ * @author Tim Yu
+ */
 public class VerticallyFlipped implements TextBlock{
+  /** What will be vertically flipped */
   private TextBlock contents;
 
-    /**
+  /**
    * Constructs a new text block which horizontally inverts the given TextBlock b.
    */
   public VerticallyFlipped(TextBlock b) {

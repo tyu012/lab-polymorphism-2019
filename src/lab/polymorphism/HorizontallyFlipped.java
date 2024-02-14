@@ -1,6 +1,14 @@
 package lab.polymorphism;
 
+/**
+ * Text block which inverts content text block so that left-to-right becomes
+ * right-to-left.
+ * @author David Rhoades
+ * @author Alyssa Trapp
+ * @author Tim Yu
+ */
 public class HorizontallyFlipped implements TextBlock {
+  /** What will be flipped horizontally */
   private TextBlock contents;
 
   /**

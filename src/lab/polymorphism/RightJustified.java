@@ -1,7 +1,16 @@
 package lab.polymorphism;
 
-public class RightJustified implements TextBlock{
+/**
+ * Text block which justifies content to the right within alloted width
+ * @author David Rhoades
+ * @author Alyssa Trapp
+ * @author Tim Yu
+ */
+public class RightJustified implements TextBlock {
+  /** The contents which will be right justified */
   private TextBlock contents;
+
+  /** The given width that the contents will be right justified in */
   private int width;
 
   /**

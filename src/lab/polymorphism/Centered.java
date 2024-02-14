@@ -1,7 +1,16 @@
 package lab.polymorphism;
 
+/**
+ * Text block which centers content text block within alloted width
+ * @author David Rhoades
+ * @author Alyssa Trapp
+ * @author Tim Yu
+ */
 public class Centered implements TextBlock{
+  /** What is centered */
   private TextBlock contents;
+  
+  /** The amount of space in which contents is centered in */
   private int width;
 
   /**

@@ -1,10 +1,20 @@
 package lab.polymorphism;
 
+/**
+ * Text block which justifies content text block to the bottom within alloted
+ * height
+ * @author Alyssa Trapp
+ * @author David Rhoades
+ * @author Tim Yu
+ */
 public class BottomJustified implements TextBlock {
+  /** What is bottom justified */
   private TextBlock contents;
+
+  /** The total space that contents is bottom justified in */
   private int height;
 
-    /**
+  /**
    * Shifts the Textbox b to the bottom
    * @pre height greater than or equal to b.height()
    * @exception Exception if height is invalid
