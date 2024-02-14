@@ -1,3 +1,11 @@
+/**
+ * Testing for the eqv method in TBUtils.java
+ * @author David Rhoades
+ * @author Alyssa Trapp
+ * @author Tim Yu
+ */
+
+
 package lab.polymorphism;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -9,7 +17,7 @@ public class EqvTest{
   public TextBlock boxedRightJustifiedHelloWorld;
   public TextBlock boxedRightJustifiedHelloWorldCopy;
   public TextBlock boxedSpaceHelloWorld;
-  public TextBlock  boxedRightJustifiedHelloWrodlDifCopy;
+  public TextBlock boxedRightJustifiedHelloWrodlDifCopy;
   public TextBlock emptyBlock;
   public TextBlock emptyBlock2;
 
